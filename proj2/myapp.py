@@ -1,0 +1,18 @@
+import requests 
+import json
+
+URL = "http://localhost:8000/stucreate/"
+
+data = {
+    'name':'Abhishek',
+    'roll':101,
+    'city':'Ranchi'
+}
+
+json_data = json.dumps(data)
+
+r = requests.post(url=URL,data=json_data)
+
+data = r.json()
+
+print(data)
